@@ -1,9 +1,10 @@
 <?php
 $cookie_name = "library_staff";
+$cookie_duration = (60 * 60 * 24 * 400); # 400 days is spec max
 $domain = "lehigh.edu";
 
 if (isset($_GET["set"]) && !isset($_COOKIE[$cookie_name])) {
-  setcookie($cookie_name, 1, time() + (60 * 60 * 24 * 365 * 20), "/", $domain);
+  setcookie($cookie_name, 1, time() + $cookie_duration, "/", $domain);
   header("Refresh:0");
 }
 elseif (isset($_GET["unset"]) && isset($_COOKIE[$cookie_name])) {
