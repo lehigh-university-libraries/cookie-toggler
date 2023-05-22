@@ -1,6 +1,6 @@
 <?php
 
-$cookie_value = "1";
+$cookie_value = "9";
 
 include '_core.php';
 
